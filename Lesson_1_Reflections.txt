@@ -1,0 +1,60 @@
+Lesson 1 Reflections
+
+1.5 How did viewing a 'diff' between two versions of a file help with spotting bugs?
+
+-  Most bugs are related to syntax errors.
+-  The 'diff' process identifies and highlights only changes in the code contents between versions.
+-  This makes it very easy to spot typos that were made since the last version was checked-in.
+-  Thereby, helping to identify and resolve bugs faster.
+
+1.8 How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+-  You can see how your program is evolving over time.
+-  You can avoid making the same mistakes over and over again.
+-  You can search through failed approaches and re-use them in another program.
+-  You can easily recover unsaved work.
+-  You can plug and play different components of the program without the risk of losing any code.
+
+1.15 What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+*  Pros
+-  Freedom to commit as and when desired.
+-  Allows flexibility, to follow "one commit per logical change" best practice.
+-  Avoids commits that have incomplete code, which would lead to compilation errors.
+-  Avoids creating unnecessary commits that can fill up version history, making it hard to navigate and troubleshoot.
+-  Allows choosing a custom commit process, which makes it easy to collaborate.
+-  Provides the option for the user to write a comment to explain the changes made with each commit, which also helps with collaboration.
+
+*  Cons
+-  Automatic back-ups can help retain unsaved work in extreme situations, like computer crashes, power outages or loss of internet.
+-  Requires users to follow good commit practices, else version history becomes hard to follow through.
+-  Causes inconsistencies in commit sizes and frequencies, making it harder to find older changes.
+-  Lacks the ability to provide comments with every commit, making it harder for collaboration and troubleshooting.
+
+1.18 Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+-  Git files are used for programming projects, where multiple files are interdependent on each other.
+-  It makes sense to track changes across these interdependent files to troubleshoot programming bugs, so they should be part of the same commit.
+-  Google Docs files are unique and independent from each other and are not used for programming.
+-  Since there is usually no relation between these files, they should have separate commits.
+
+1.22 How can you use the commands "git log" and "git diff" to view the history of files?
+
+-  "git log" provides a chronological list of the most recent commits made to the repository being searched.
+-  The output includes unique IDs for each commit, along with timestamps, author and author notes.
+-  "git diff" followed by two commit IDs shows the changes between those two commits.
+-  "git diff" results will show the lines of code that were added and removed, as well as the contents of these lines.
+
+1.26 How might using version control make you more confident to make changes that could break something?
+
+-  Making a new commit in Git is as easy as using the "git commit" command.
+-  Temporarily reverting to older commits is as simple as using the "git checkout" command.
+-  This, along with the "git log" and "git diff" commands makes it easy to troubleshoot for bugs.
+-  Since it is so easy to revert to a previous version, programmers can now make changes with confidence and have the freedom to break things.
+
+1.31 Now that you have your workspace set up, what do you want to try using Git for?
+
+-  Practice programing with complex projects in C++ and Python.
+-  Clone and modify Repositories for Udacity Nanodegree Projects.
+-  Create Repositories for my own Projects.
+-  Collaborate with peers on Robotics Projects via GitHub.
