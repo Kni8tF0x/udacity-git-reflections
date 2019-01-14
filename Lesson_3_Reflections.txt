@@ -24,3 +24,18 @@ Lesson 3 Reflections
 -  The Staging Area provides the option to commit one logical change a time within a large Working Directory.
 -  The Staging Area provides the ability to double check the contents of a logical before making a commit.
 -  The "git reset" command allows files to be removed from the Staging Area is the contents are too large for a single commit.
+
+3.12 How can you use the staging area to make sure you have one commit per logical change?
+
+-  At any given time, you can use the "git status" command to check if any changes have been made since the last commit.
+-  If changes have been made, the changed file(s) can be added to the Staged Area one at a time using the "git add" command.
+-  Now, you can use the "git diff" command to check for changes between the Working Directory and the Staged Area.
+-  Additionally, you can use the "git diff --staged" command to check for changes between the Staged Area and the latest commit.
+-  By comparing the results between these two commands, we can verify whether the difference between the Staged Area and latest Repository commit is one logical change.
+-  This is particularly helpful if more than one file has been changed since the latest commit, but only one logical change is desired, meaning the rest can be discarded.
+-  At this point, we can run the "git commit" command to commit the changes present in the staging area.
+-  Running the "git diff" command again after the commit will show any pending changes lying in the Working Directory, which can be discarded using the "git reset --hard".
+-  Note that the "git reset --hard" will discard any pending changes in the Staging Area and Working Directory at the time of execution, so it is imperative to commit the desired changes in the Staging Area before running this command.
+-  There is no way to recover changes that are lost by running the "git reset --hard" command, so it must be used with caution.
+-  Adding desired changes to the Staging Area and using the various forms of the "git diff" command helps evaluate whether we're committing more than one logical change at a time.
+-  As a final sanity check, it is recommended to run the "git diff" command one last time to ensure no results are returned, meaning that the desired change has been committed and the remaining changes have been discarded.
