@@ -1,0 +1,26 @@
+Lesson 3 Reflections
+
+3.4 What happens when you initialize a repository? Why do you need to do it?
+
+-  A Repository is initialized in Git using the "git init" command.
+-  This creates a hidden folder named '.git' in the directory where the command was executed.
+-  This folder contains all the metadata associated with a Git Repository.
+-  From this point on, all files in the parent directory (and its sub-directories) can be tracked for changes.
+-  Without initializing a Repository, Git has no way of tracking history and changes.
+-  Initializing does not create a commit, since the user may not want all files within the directory to be added to the Repository.
+-  Also, the user wouldn't have the opportunity to add a comment to a commit created upon initialization.
+-  Running the "git status" command shows all files that are untracked and available for committing into the Repository.
+
+3.7 How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+-  The Working Directory is simply the directory where the user is currently working.
+-  The Working Directory is part of the Operating System's file system and not part of Git.
+-  A Repository is a collection of files within a parent directory (and its sub-directories) that are tied to single Git instance.
+-  A Repository consists of the contents of the working (parent) directory, its sub-directories and the '.git' folder with change history metadata.
+-  The Working Directory can contain multiple files with multiple logical changes.
+-  The Staging Area provides a temporary stage wherein the user can add changes one logical step at a time, instead of the entire contents of the working directory.
+-  Files can be added one a time to the Staging Area using the "git add" command.
+-  The user can then check the contents of the Staging Area using the "git status" command to ensure only the desired changes will be committed.
+-  The Staging Area provides the option to commit one logical change a time within a large Working Directory.
+-  The Staging Area provides the ability to double check the contents of a logical before making a commit.
+-  The "git reset" command allows files to be removed from the Staging Area is the contents are too large for a single commit.
