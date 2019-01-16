@@ -83,3 +83,16 @@ Lesson 3 Reflections
 -  Once merged, the new tip will take the name of the checked out branch.
 -  The other branch label can be removed with the "git branch -d" command. This only deletes the label. All branch commits are retained as part of the merge.
 -  Since the Git Log only shows commits in chronological order, it helps to maintain a diagram to visually differentiate between commits of the two branches before the merge.
+
+3.32 What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+-  Git uses automatic merging when it doesn't detect any conflicts between changes in files in either branch being merged.
+-  If a conflict is detected, Git highlights it within the file(s) in question and relies on the user to resolve the conflict manually.
+-  Pros
+--  Increases development efficiency by automatically merging all unrelated changes without needing user intervention.
+--  For conflicts that aren't obvious, or where multiple solutions are possible, providing the option for users to decide is crucial.
+--  Most Repositories are collaborative projects and having the option to manually resolve conflicts can ensure each user's intentions are accounted for.
+-  Cons
+--  Using a standard algorithm to determine conflicts can create issues in edge scenarios.
+--  An auto-merge could lead to an undesired outcome. Although the merge can be reverted, it may be difficult to troubleshoot the issue without visibility into what was executed by the auto-merge.
+--  Complex Repositories may have too many conflicts that may be tedious to evaluate manually. A smarter auto-merging algorithm could mitigate the pain in such situations.
