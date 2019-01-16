@@ -56,3 +56,5 @@ Lesson 3 Reflections
 --  Working on several different features at once and independently of each other, while ensuring a working version of the Feature is retained in the master branch.
 --  Keeping the development process agile by avoiding implementing peripheral, skeletal features like toggle buttons until a later stage.
 -  Git allows you to have multiple branches for the same commit. In this case any changes made henceforth will only be added to the branch that is currently checked out.
+-  Branches are commonly used for context switching (if the current feature contains a bug, you can create a separate branch for the bug and leave the existing branch to concentrate of the feature).
+-  Common use cases for branches: Production, Development, Experimental, Feature-specific, Bug-specific.
