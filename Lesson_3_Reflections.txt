@@ -69,3 +69,17 @@ Lesson 3 Reflections
 -  Diagrams help us spot outlying commits that have sprouted out by committing changes to an older (top tip) commit within a branch, which would be lost if not added to its own new branch.
 -  Diagrams help us to visualize the structure of the Repository so that we can make sure that we are committing changes correctly and as desired.
 -  All these features help us in creating and maintaining clean and organized Repositories, where collaborating, adding new features and identifying and fixing bugs is easy and intuitive.
+
+3.25 What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+-  The "git merge" command is used to merge branches together.
+-  Git will merge the branches mentioned in the merge command (order does not matter) into the branch that is currently checked out.
+-  The checked out branch does not need to be mentioned in the merge command, but it is best practice to do so in order to mentally visualize the merge process and prevent mistakes.
+-  Once the command is run, Git will compare the tip of each branch (ie. the latest commit) with the common parent and merge the changes.
+-  All commits within all branches being merged (you can merge more than two branches) will be retained via the Reachability rule.
+-  Commits will show up in chronological order in the Git Log.
+-  Therefore, "git diff" between consecutive commits may not always make sense or be helpful.
+-  In order to check only the changes added via a particular commit, you can use the "git show" command, which compares any commit with its parent (user does not need to know the parent).
+-  Once merged, the new tip will take the name of the checked out branch.
+-  The other branch label can be removed with the "git branch -d" command. This only deletes the label. All branch commits are retained as part of the merge.
+-  Since the Git Log only shows commits in chronological order, it helps to maintain a diagram to visually differentiate between commits of the two branches before the merge.
