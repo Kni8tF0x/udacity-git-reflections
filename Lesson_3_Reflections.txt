@@ -58,3 +58,14 @@ Lesson 3 Reflections
 -  Git allows you to have multiple branches for the same commit. In this case any changes made henceforth will only be added to the branch that is currently checked out.
 -  Branches are commonly used for context switching (if the current feature contains a bug, you can create a separate branch for the bug and leave the existing branch to concentrate of the feature).
 -  Common use cases for branches: Production, Development, Experimental, Feature-specific, Bug-specific.
+
+3.20 How do the diagrams help you visualize the branch structure?
+
+-  Diagrams help identify how many branches are present within a particular Repository.
+-  Diagrams show the point at which a particular branch was diverted out of the master branch.
+-  Diagrams show the commits within the master branch that do not belong to a particular branch, since they were committed after the branching.
+-  Diagrams show the point at which a branch was merged back into master.
+-  Diagrams help us keep track of the Reachability of each commit to its parent.
+-  Diagrams help us spot outlying commits that have sprouted out by committing changes to an older (top tip) commit within a branch, which would be lost if not added to its own new branch.
+-  Diagrams help us to visualize the structure of the Repository so that we can make sure that we are committing changes correctly and as desired.
+-  All these features help us in creating and maintaining clean and organized Repositories, where collaborating, adding new features and identifying and fixing bugs is easy and intuitive.
