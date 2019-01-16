@@ -39,3 +39,20 @@ Lesson 3 Reflections
 -  There is no way to recover changes that are lost by running the "git reset --hard" command, so it must be used with caution.
 -  Adding desired changes to the Staging Area and using the various forms of the "git diff" command helps evaluate whether we're committing more than one logical change at a time.
 -  As a final sanity check, it is recommended to run the "git diff" command one last time to ensure no results are returned, meaning that the desired change has been committed and the remaining changes have been discarded.
+
+3.15 What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+-  Every Git Repository comes with a single branch, called "master" by default.
+-  The "git branch" command allows us to check for existing branches as well as create new ones.
+-  Each branch has a unique ID for each of its commits, but branches also have labels that are easy for human comprehension.
+-  Also just like commits, branches can be checked out. You will be checking out the tip (the latest commit) of the branch.
+-  Users can label branches (just like commit messages) to help organize their work and navigate through history.
+-  If the changes made to a branch are not successful, the user can simply revert back to the master branch and discard the branch.
+-  If the changes made to a branch are successful, the branch can be merged back into the master branch, even if the master branch has been updated since the initial branching.
+-  Branches are useful for: -
+--  Testing Features that are not ready for Production, but are complex enough to need more than one commit.
+--  Creating different versions of the same Feature, for testing purposes, before committing to any changes.
+--  Collaborating with multiple developers, where each developer can have their own branch so as to work independently of each other.
+--  Working on several different features at once and independently of each other, while ensuring a working version of the Feature is retained in the master branch.
+--  Keeping the development process agile by avoiding implementing peripheral, skeletal features like toggle buttons until a later stage.
+-  Git allows you to have multiple branches for the same commit. In this case any changes made henceforth will only be added to the branch that is currently checked out.
