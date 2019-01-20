@@ -6,3 +6,12 @@
 -  Also, other collaborators will do the same with their local Repositories.
 -  In this way the collaborative work with them be hosted on GitHub.
 -  Individual developers can then pull the combined Repository to their local machines to do their own testing and further development.
+
+4.10 Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+
+-  The value of having remote Repositories is to enable collaboration with other Developers.
+-  This means that the remote Repository could contain changes or new code that may not be compatible with your local Repository.
+-  Therefore, it is safer to let users manually pull changes from the remote Repository to their local Repository after they have verified that the changes are compatible.
+-  Also, automatically pulling in changes every time there is a new commit to the remote Repository could create a lot of extra, unwanted commits, making the Project difficult to track.
+-  Furthermore, if the local Repository has multiple active branches and the one currently checked out doesn't exist on the remote Repository, an automatic pull could fail with errors.
+-  Similarly, pushing changes from a local Repository to a remote Repository should also be a manual process, ensuring bug-free and compatible code is pushed to a collaborative space.
