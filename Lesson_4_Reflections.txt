@@ -1,1 +1,8 @@
-4.6 When would you want to create a remote Repository rather than keeping all your work local?
+4.7 When would you want to create a remote Repository rather than keeping all your work local?
+
+-  Keeping work local makes it hard to collaborate with others.
+-  Once work in the local Repository is bug-free and Production ready, it makes sense to create a remote version.
+-  This remote Repository can then be pushed to a collaborative environment like GitHub.
+-  Also, other collaborators will do the same with their local Repositories.
+-  In this way the collaborative work with them be hosted on GitHub.
+-  Individual developers can then pull the combined Repository to their local machines to do their own testing and further development.
