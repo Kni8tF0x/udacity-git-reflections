@@ -27,3 +27,11 @@
 -  Forking is used to allow developers to maintain their own versions of a remote Repository on their account, when they do not have permissions to contribute changes to the original remote Repository.
 -  Forking also provides the original author with credit for allowing other developers to use his/her Repository for their personal use.
 -  While developers forking a Repository do not have permissions to manually edit the original Repository, GitHub provides a way for them to request changes/improvements to the original author.
+
+4.22 What is the benefit of having a copy of the last known state of the remote stored locally?
+
+-  A remote Repository can only be accessed when your local machine is online.
+-  If you plan to go offline and continue working, it makes sense to fetch the latest version of the remote Repository to your local machine.
+-  This way, when you come back online at a later time, you can simply run the "git fetch" command again and see what has changed remotely.
+-  Using "git fetch" will store the latest version of the remote Repository at the 'origin/master' branch, so you can continue to make local changes without merging the remote changes until you're ready to do so.
+-  Then, when ready, the 'origin/master' and 'master' branches can me merged using "git merge".
