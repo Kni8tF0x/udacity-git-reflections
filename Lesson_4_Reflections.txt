@@ -15,3 +15,15 @@
 -  Also, automatically pulling in changes every time there is a new commit to the remote Repository could create a lot of extra, unwanted commits, making the Project difficult to track.
 -  Furthermore, if the local Repository has multiple active branches and the one currently checked out doesn't exist on the remote Repository, an automatic pull could fail with errors.
 -  Similarly, pushing changes from a local Repository to a remote Repository should also be a manual process, ensuring bug-free and compatible code is pushed to a collaborative space.
+
+4.14 Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+-  Branches are different commit paths within the same local Repository.
+-  Branches are used for various tasks: testing new features, fixing bugs, experimenting with existing features, collaborating with peers locally, et cetera.
+-  Clones are used to copy existing Repositories, either locally on the same machine, or from a collaborative space, such as GitHub, to a local machine.
+-  Clones allow developers to checkout a local copy of a collaborative Repository, so that each developer can work independently, without breaking the master copy.
+-  Repositories are cloned when each developer has permissions to contribute changes to the original Repository.
+-  Forking is a form of cloning where GitHub makes a clone of an existing remote Repository on GitHub itself, except in the forker's account.
+-  Forking is used to allow developers to maintain their own versions of a remote Repository on their account, when they do not have permissions to contribute changes to the original remote Repository.
+-  Forking also provides the original author with credit for allowing other developers to use his/her Repository for their personal use.
+-  While developers forking a Repository do not have permissions to manually edit the original Repository, GitHub provides a way for them to request changes/improvements to the original author.
